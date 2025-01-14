@@ -30,10 +30,11 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.txtTelegrama = new System.Windows.Forms.TextBox();
-            this.chkUrgente = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCalcularPrecio = new System.Windows.Forms.Button();
             this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.chkOrdinario = new System.Windows.Forms.RadioButton();
+            this.chkUrgente = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
@@ -56,18 +57,6 @@
             this.txtTelegrama.Size = new System.Drawing.Size(852, 290);
             this.txtTelegrama.TabIndex = 1;
             // 
-            // chkUrgente
-            // 
-            this.chkUrgente.AutoSize = true;
-            this.chkUrgente.Location = new System.Drawing.Point(101, 416);
-            this.chkUrgente.Margin = new System.Windows.Forms.Padding(4);
-            this.chkUrgente.Name = "chkUrgente";
-            this.chkUrgente.Size = new System.Drawing.Size(84, 20);
-            this.chkUrgente.TabIndex = 2;
-            this.chkUrgente.Text = "Urgente?";
-            this.chkUrgente.UseVisualStyleBackColor = true;
-            this.chkUrgente.CheckedChanged += new System.EventHandler(this.chkUrgente_CheckedChanged);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -89,7 +78,6 @@
             this.btnCalcularPrecio.Text = "Calcular";
             this.btnCalcularPrecio.UseVisualStyleBackColor = true;
             this.btnCalcularPrecio.Click += new System.EventHandler(this.btnCalcularPrecio_Click);
-
             // 
             // txtPrecio
             // 
@@ -99,15 +87,39 @@
             this.txtPrecio.Size = new System.Drawing.Size(132, 22);
             this.txtPrecio.TabIndex = 5;
             // 
+            // chkOrdinario
+            // 
+            this.chkOrdinario.AutoSize = true;
+            this.chkOrdinario.Location = new System.Drawing.Point(101, 416);
+            this.chkOrdinario.Name = "chkOrdinario";
+            this.chkOrdinario.Size = new System.Drawing.Size(83, 20);
+            this.chkOrdinario.TabIndex = 6;
+            this.chkOrdinario.TabStop = true;
+            this.chkOrdinario.Text = "Ordinario";
+            this.chkOrdinario.UseVisualStyleBackColor = true;
+            this.chkOrdinario.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // chkUrgente
+            // 
+            this.chkUrgente.AutoSize = true;
+            this.chkUrgente.Location = new System.Drawing.Point(216, 416);
+            this.chkUrgente.Name = "chkUrgente";
+            this.chkUrgente.Size = new System.Drawing.Size(76, 20);
+            this.chkUrgente.TabIndex = 7;
+            this.chkUrgente.TabStop = true;
+            this.chkUrgente.Text = "Urgente";
+            this.chkUrgente.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.chkUrgente);
+            this.Controls.Add(this.chkOrdinario);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.btnCalcularPrecio);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.chkUrgente);
             this.Controls.Add(this.txtTelegrama);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -122,10 +134,11 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTelegrama;
-        private System.Windows.Forms.CheckBox chkUrgente;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCalcularPrecio;
         private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.RadioButton chkOrdinario;
+        private System.Windows.Forms.RadioButton chkUrgente;
     }
 }
 
